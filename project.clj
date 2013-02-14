@@ -1,9 +1,9 @@
 ;; Use leiningen 2
 (defproject org.clojars.michaelsbradleyjr/liberator "0.9.0-SNAPSHOT"
   :description "Liberator - A REST library for Clojure."
-  :dependencies [[org.clojure/clojure "1.5.0-RC2"]
+  :dependencies [[org.clojure/clojure "1.5.0-RC16"]
                  [org.clojure/tools.trace "0.7.5"]
-                 [org.clojure/tools.logging "0.2.4"]
+                 [org.clojure/tools.logging "0.2.6"]
                  [org.clojure/data.json "0.2.1"]
                  [org.clojure/data.csv "0.1.2"]
                  [hiccup "1.0.2"]] ;; Used by code rendering default representations.
@@ -16,15 +16,17 @@
   :scm {:connection "scm:git:https://github.com/clojure-liberator/liberator.git"
         :url "https://github.com/clojure-liberator/liberator"}
 
-  :plugins [[lein-midje "2.0.4"]
-            [lein-ring "0.8.0"]]
+  :plugins [[lein-midje "3.0-beta1"]
+            [lein-ring "0.8.2"]]
 
-  :profiles {:dev {:dependencies [[ring/ring-jetty-adapter "1.2.0-SNAPSHOT"]
+  :profiles {:dev {:dependencies [[ring/ring-jetty-adapter "1.2.0-beta1"]
                                   [ring-mock "0.1.3"]
-                                  [ring/ring-devel "1.2.0-SNAPSHOT"]
+                                  [ring/ring-devel "1.2.0-beta1"]
                                   [compojure "1.1.5" :exclusions [org.clojure/tools.macro]] ;; only for examples
-                                  [midje "1.4.0"]
-                                  [org.clojure/clojurescript "0.0-1552"]]
+                                  [midje "1.5-beta1"]
+                                  [bultitude "0.2.1"]
+                                  [org.clojure/clojurescript "0.0-1576"]]
+
                     :source-paths [ "src" "examples/clj"]}}
 
   :source-paths ["src"]
